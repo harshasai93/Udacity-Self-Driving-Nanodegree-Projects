@@ -20,16 +20,26 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [afterAugmentation]: ./WriteUpImages/afterAugmentation.jpg "after Augmentation"
+
 [afterGrayscale]: ./WriteUpImages/afterGrayscale.jpg "after Grayscale"
+
 [afterNormalizing]: ./WriteUpImages/afterNormalizing.jpg "after Normalizing"
+
 [beforeAugmentation]: ./WriteUpImages/beforeAugmentation.png "before Augmentation"
+
 [beforeGrayscale]: ./WriteUpImages/beforeGrayscale.png "before Grayscale"
-[Found Images Predictions]: ./WriteUpImages/Found Images Predictions.png "Found Images Predictions"
+
+[FoundImagesPredictions]: ./WriteUpImages/Found Images Predictions.png "Found Images Predictions"
+
 [randomAffineTransformation]: ./WriteUpImages/randomAffineTransformation.png "random Affine Transformation"
+
 [RandomScaling]: ./WriteUpImages/RandomScaling.png "Random Scaling"
+
 [randomTranslation]: ./WriteUpImages/randomTranslation.png "random Translation"
-[Softmax Probabilities]: ./WriteUpImages/Softmax Probabilities.png "Softmax Probabilities"
-[Web Found Images]: ./WriteUpImages/Web Found Images.png "Web Found Images"
+
+[SoftmaxProbabilities]: ./WriteUpImages/Softmax Probabilities.png "Softmax Probabilities"
+
+[WebFoundImages]: ./WriteUpImages/Web Found Images.png "Web Found Images"
 
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -87,8 +97,10 @@ To add more data to the the data set, I used the following techniques because th
 
 1) Random scaling
 ![alt text][RandomScaling]
+
 2) Random translation
 ![alt text][randomTranslation]
+
 3) Random Affine Transformation
 ![alt text][randomAffineTransformation]
 
@@ -172,14 +184,15 @@ model is well suited for traffic sign recognition.
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][Web Found Images] 
+![alt text][WebFoundImages] 
 
 The first image might be difficult to classify because ...
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 Here are the results of the prediction:
-![alt text][Found Images Predictions] 
+![alt text][FoundImagesPredictions] 
+
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -196,7 +209,7 @@ The model was able to correctly guess 4 of the 5 traffic signs, which gives an a
 
 The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
 
-![alt text][Softmax Probabilities] 
+![alt text][SoftmaxProbabilities] 
 
 For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
 
