@@ -59,11 +59,11 @@ signs data set:
 Here is an exploratory visualization of the data set. 
 
 1. Random images from the dataset with their labels on top to see how the dataset samples looks when printed on screen.
-![alt text][image1]
+![alt text][beforeGrayscale]
 
 2. Bar chart to show the number of samples available for each label in the dataset.
 
-![alt text][image1]
+![alt text][beforeAugmentation]
 
 ###Design and Test a Model Architecture
 
@@ -73,24 +73,24 @@ As a first step, I decided to convert the images to grayscale because it reduces
 
 Here is an example of a traffic sign image before and after grayscaling.
 
-![alt text][image2]
+![alt text][afterGrayscale]
 
 As a last step, I normalized the image data to bring the image to normal distribution
 
 Here is an example of a traffic sign image before and after grayscaling.
 
-![alt text][image2]
+![alt text][afterNormalizing]
 
 I decided to generate additional data because the model should be trained uniformly for all the labels to get a unbiased classification.
 
 To add more data to the the data set, I used the following techniques because these changes tranform the image to a new image without any effect on the disinguishing features,   
 
 1) Random scaling
-![alt text][image3]
+![alt text][RandomScaling]
 2) Random translation
-![alt text][image3]
+![alt text][randomTranslation]
 3) Random Affine Transformation
-![alt text][image3]
+![alt text][randomAffineTransformation]
 
 Here is an example of an original image and an augmented image:
 
@@ -98,7 +98,7 @@ Here is an example of an original image and an augmented image:
 
 The difference between the original data set and the augmented data set is the following ... 
 
-![alt text][image3]
+![alt text][afterAugmentation]
 
 ####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
@@ -172,14 +172,14 @@ model is well suited for traffic sign recognition.
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![alt text][Web Found Images] 
 
 The first image might be difficult to classify because ...
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 Here are the results of the prediction:
+![alt text][Found Images Predictions] 
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -195,6 +195,8 @@ The model was able to correctly guess 4 of the 5 traffic signs, which gives an a
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+
+![alt text][Softmax Probabilities] 
 
 For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
 
