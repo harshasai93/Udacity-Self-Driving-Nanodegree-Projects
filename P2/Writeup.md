@@ -104,10 +104,6 @@ To add more data to the the data set, I used the following techniques because th
 3) Random Affine Transformation
 ![alt text][randomAffineTransformation]
 
-Here is an example of an original image and an augmented image:
-
-![alt text][image3]
-
 The difference between the original data set and the augmented data set is the following ... 
 
 ![alt text][afterAugmentation]
@@ -159,7 +155,7 @@ I used a well known regularization technique dropout to over-come overfitting.
 So I added two layers of drop-out after each of the Fully Connected Layer except the last one.
 The Validation accuracy improved significantly to 94.6 % by this method.
 
-After I adjusted the Hyper-parameters like keep-prob, learning rate, epochs and batch-size for several iterations to achieve the validation accuracy of 94.6%
+After that I adjusted the Hyper-parameters like keep-prob, learning rate, epochs and batch-size for several iterations to achieve the validation accuracy of 94.6%
 
 If a well known architecture was chosen:
 * What architecture was chosen?
@@ -182,11 +178,14 @@ model is well suited for traffic sign recognition.
 
 ####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
-Here are five German traffic signs that I found on the web:
+Here are six German traffic signs that I found on the web:
 
 ![alt text][WebFoundImages] 
 
-The first image might be difficult to classify because ...
+images 1(No entry), 2(General caution), 4(Speed limit (60km/h)) might be easier to classify as the shapes in them are relatively less complex, like staight lines or simple curves. The model was able to classify all three simple images correctly.
+
+But images 3(Slippery road),5(Road work), 6(No passing) might be difficult to classify as the images contain more complex shapes like 
+human,cars, slippery road. But the model was able to classify images 3 and 5 correctly but not the image 6.
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -212,9 +211,9 @@ The code for making predictions on my final model is located in the 22nd cell of
 
 ![alt text][SoftmaxProbabilities] 
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+From the above the figure, the model was able to make 100% correct predictions for the first 5 images namely 'No entry','General caution', 'Slippery road', 'Speed limit (60km/h)' and 'Road work' with a probablity of 1.0.
 
-For the second image ... 
+For the last image which is a 'No passing' sign the model made an incorrect prediction of 'Go straight or right' sign also with a probability of 1.0. 
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 ####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
