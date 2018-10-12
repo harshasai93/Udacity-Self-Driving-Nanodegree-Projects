@@ -27,7 +27,7 @@ lane part of the image.
 [//]: # (Image References)
 
 [image1]: ./output_images/Undistortion.jpg "Undistorted"
-[image2]: ./output_images/Undistortion_Road.jpg.jpg "Road Transformed"
+[image2]: ./output_images/Undistortion_Road.jpg "Road Transformed"
 [image3]: ./output_images/Perspective.jpg.jpg "Perspective Transform"
 [image4]: ./output_images/Magnitude_Threshold.jpg "Magnitude Thresholding"
 [image5]: ./output_images/Direction_Threshold.jpg "Direction Thresholding"
