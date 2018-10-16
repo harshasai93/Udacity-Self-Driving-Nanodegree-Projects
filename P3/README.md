@@ -152,21 +152,24 @@ Resized Image:
 
 #### 2. Creation of the Training Set & Training Process
 
-I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... :
+To make the model learn the recovery behaviour, I collected data from simulator by coming to the center from the edges.
 
-Etc ....
+After the collection process, I had 15268 number of data points. I then preprocessed this data by cropping, resizing and normalizing the dataset. I also augmented the dataset by flippinf images.
 
-After the collection process, I had X number of data points. I then preprocessed this data by ...
+I finally randomly shuffled the data set and put 0.2% of the data into a validation set. I used a generator to feed the training process data in batches, this reduced the load in the memory considerably and increased the training time.
 
-
-I finally randomly shuffled the data set and put Y% of the data into a validation set. 
-
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+The model was training with reducing loss for less than 10 epochs.
 
 #### Final Video
 
-Here's a link to [Project Video](./output_videos/run1.mp4)
+Here's a link to [Project Video](./run2.mp4)
 
 ---
 
 ### Discussion
+
+The data was the deciding factor whether the vehicle rides successfully or not. In the First attempt the vehicle due to straight bias in the data was easily colliding with edge. After removing the images with zero steering angle the performance immediately improved without changing anything. Hence the dataset should be balanced and with all possible scenarios for the model to perform the best. 
+
+Then I collected the data for recovery from edges, which made the car driving in the center for most of the video. The only possible improvements is to collect more data from other tracks and augment more data to represent the edge scenarios.
+
+
